@@ -1,0 +1,321 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Sky gradient: dawn sunrise -->
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a0a2e"/>
+      <stop offset="25%" stop-color="#c2410c"/>
+      <stop offset="50%" stop-color="#f97316"/>
+      <stop offset="75%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+    <!-- Sun radial glow -->
+    <radialGradient id="sunGlow" cx="50%" cy="100%" r="60%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#fbbf24" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Water reflection gradient -->
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#16a34a" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#14532d" stop-opacity="0.8"/>
+    </linearGradient>
+    <!-- Paddy field gradient -->
+    <linearGradient id="paddyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="60%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+    <!-- Far hill gradient -->
+    <linearGradient id="hillGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#15803d"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+    <!-- Mist overlay -->
+    <linearGradient id="mist" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff7ed" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#fff7ed" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#fef3c7" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blur5">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+  </defs>
+
+  <!-- ===== SKY ===== -->
+  <rect width="1440" height="520" fill="url(#sky)"/>
+  
+  <!-- Sun glow spread -->
+  <ellipse cx="720" cy="220" rx="380" ry="220" fill="url(#sunGlow)" filter="url(#blur5)"/>
+  
+  <!-- Sun disk -->
+  <circle cx="720" cy="218" r="38" fill="#fef08a" filter="url(#blur1)"/>
+  <circle cx="720" cy="218" r="28" fill="#fde047"/>
+  <circle cx="720" cy="218" r="20" fill="#fefce8"/>
+
+  <!-- Sun rays -->
+  <g opacity="0.35" filter="url(#blur1)">
+    <line x1="720" y1="165" x2="720" y2="140" stroke="#fde047" stroke-width="2.5"/>
+    <line x1="754" y1="174" x2="768" y2="152" stroke="#fde047" stroke-width="2"/>
+    <line x1="776" y1="200" x2="800" y2="192" stroke="#fde047" stroke-width="2"/>
+    <line x1="776" y1="236" x2="800" y2="248" stroke="#fde047" stroke-width="2"/>
+    <line x1="754" y1="262" x2="768" y2="284" stroke="#fde047" stroke-width="2"/>
+    <line x1="686" y1="174" x2="672" y2="152" stroke="#fde047" stroke-width="2"/>
+    <line x1="664" y1="200" x2="640" y2="192" stroke="#fde047" stroke-width="2"/>
+    <line x1="664" y1="236" x2="640" y2="248" stroke="#fde047" stroke-width="2"/>
+    <line x1="686" y1="262" x2="672" y2="284" stroke="#fde047" stroke-width="2"/>
+  </g>
+
+  <!-- Clouds -->
+  <g opacity="0.75" filter="url(#blur2)">
+    <ellipse cx="200" cy="90" rx="90" ry="28" fill="#fed7aa"/>
+    <ellipse cx="160" cy="88" rx="55" ry="20" fill="#fde68a"/>
+    <ellipse cx="240" cy="88" rx="55" ry="20" fill="#fed7aa"/>
+    <ellipse cx="1200" cy="75" rx="100" ry="30" fill="#fed7aa"/>
+    <ellipse cx="1155" cy="73" rx="60" ry="22" fill="#fde68a"/>
+    <ellipse cx="1248" cy="73" rx="60" ry="22" fill="#fed7aa"/>
+    <ellipse cx="480" cy="60" rx="70" ry="20" fill="#fef3c7" stop-opacity="0.6"/>
+    <ellipse cx="960" cy="50" rx="80" ry="22" fill="#fef3c7"/>
+  </g>
+
+  <!-- ===== DISTANT MOUNTAINS / HILLS ===== -->
+  <!-- Far mountains (hazy) -->
+  <path d="M0,290 Q120,210 250,250 Q380,190 520,240 Q650,170 780,230 Q900,175 1040,235 Q1160,195 1300,245 Q1380,225 1440,250 L1440,340 L0,340 Z"
+        fill="#166534" opacity="0.5" filter="url(#blur5)"/>
+  <!-- Mid hills -->
+  <path d="M0,320 Q100,265 220,295 Q350,245 470,285 Q600,240 730,278 Q860,248 990,282 Q1120,252 1250,280 Q1350,265 1440,285 L1440,360 L0,360 Z"
+        fill="url(#hillGrad)" opacity="0.8" filter="url(#blur2)"/>
+  <!-- Close hill ridge -->
+  <path d="M0,345 Q180,300 360,330 Q540,295 720,325 Q900,300 1080,332 Q1260,305 1440,335 L1440,380 L0,380 Z"
+        fill="#15803d" opacity="0.9"/>
+
+  <!-- ===== PADDY TERRACED FIELDS ===== -->
+  <!-- Terrace 1 - far -->
+  <path d="M0,370 Q360,355 720,368 Q1080,355 1440,370 L1440,395 Q1080,380 720,393 Q360,380 0,395 Z"
+        fill="#22c55e" opacity="0.85"/>
+  <!-- Water shimmer on terrace 1 -->
+  <path d="M100,376 Q300,372 500,376 Q700,372 900,376 Q1100,372 1300,376 L1300,382 Q1100,379 900,382 Q700,379 500,382 Q300,379 100,382 Z"
+        fill="#86efac" opacity="0.3"/>
+
+  <!-- Terrace 2 - mid -->
+  <path d="M0,393 Q360,383 720,393 Q1080,383 1440,393 L1440,420 Q1080,408 720,418 Q360,408 0,420 Z"
+        fill="#16a34a" opacity="0.9"/>
+  <!-- Water lines -->
+  <rect x="0" y="398" width="1440" height="1.5" fill="#bbf7d0" opacity="0.4"/>
+  <rect x="0" y="404" width="1440" height="1" fill="#86efac" opacity="0.3"/>
+
+  <!-- Terrace 3 - near -->
+  <path d="M0,418 Q360,408 720,418 Q1080,408 1440,418 L1440,460 Q1080,448 720,458 Q360,448 0,460 Z"
+        fill="#15803d" opacity="0.95"/>
+  <!-- Paddy row lines on terrace 3 -->
+  <g opacity="0.25" stroke="#4ade80" stroke-width="1.2">
+    <line x1="0" y1="424" x2="1440" y2="424"/>
+    <line x1="0" y1="430" x2="1440" y2="430"/>
+    <line x1="0" y1="436" x2="1440" y2="436"/>
+    <line x1="0" y1="442" x2="1440" y2="442"/>
+    <line x1="0" y1="448" x2="1440" y2="448"/>
+  </g>
+  
+  <!-- Foreground ground -->
+  <path d="M0,455 Q360,445 720,455 Q1080,445 1440,455 L1440,520 L0,520 Z"
+        fill="#14532d"/>
+  
+  <!-- Paddy crop rows (decorative vertical lines) -->
+  <g opacity="0.4" stroke="#4ade80" stroke-width="1.5">
+    <g transform="translate(50,395)">
+      <line x1="0" y1="0" x2="0" y2="-18"/><line x1="12" y1="0" x2="12" y2="-16"/>
+      <line x1="24" y1="0" x2="24" y2="-19"/><line x1="36" y1="0" x2="36" y2="-15"/>
+      <line x1="48" y1="0" x2="48" y2="-20"/>
+    </g>
+    <g transform="translate(200,395)">
+      <line x1="0" y1="0" x2="0" y2="-17"/><line x1="12" y1="0" x2="12" y2="-19"/>
+      <line x1="24" y1="0" x2="24" y2="-15"/><line x1="36" y1="0" x2="36" y2="-20"/>
+      <line x1="48" y1="0" x2="48" y2="-16"/>
+    </g>
+    <g transform="translate(900,395)">
+      <line x1="0" y1="0" x2="0" y2="-18"/><line x1="12" y1="0" x2="12" y2="-16"/>
+      <line x1="24" y1="0" x2="24" y2="-19"/><line x1="36" y1="0" x2="36" y2="-15"/>
+    </g>
+    <g transform="translate(1200,395)">
+      <line x1="0" y1="0" x2="0" y2="-17"/><line x1="12" y1="0" x2="12" y2="-19"/>
+      <line x1="24" y1="0" x2="24" y2="-15"/><line x1="36" y1="0" x2="36" y2="-20"/>
+    </g>
+  </g>
+
+  <!-- ===== PALM TREES (silhouette) ===== -->
+  <!-- Left palm -->
+  <g transform="translate(60, 295)">
+    <rect x="-5" y="0" width="10" height="120" fill="#14532d" rx="3"/>
+    <ellipse cx="0" cy="5" rx="45" ry="18" fill="#15803d" transform="rotate(-20)"/>
+    <ellipse cx="0" cy="5" rx="45" ry="16" fill="#16a34a" transform="rotate(15)"/>
+    <ellipse cx="0" cy="5" rx="40" ry="14" fill="#15803d" transform="rotate(-45)"/>
+    <ellipse cx="0" cy="5" rx="38" ry="13" fill="#15803d" transform="rotate(45)"/>
+    <ellipse cx="0" cy="5" rx="35" ry="12" fill="#22c55e" transform="rotate(0)"/>
+  </g>
+  <!-- Right palm -->
+  <g transform="translate(1380, 280)">
+    <rect x="-5" y="0" width="10" height="130" fill="#14532d" rx="3"/>
+    <ellipse cx="0" cy="5" rx="48" ry="18" fill="#15803d" transform="rotate(20)"/>
+    <ellipse cx="0" cy="5" rx="44" ry="16" fill="#16a34a" transform="rotate(-15)"/>
+    <ellipse cx="0" cy="5" rx="42" ry="14" fill="#15803d" transform="rotate(45)"/>
+    <ellipse cx="0" cy="5" rx="38" ry="12" fill="#22c55e" transform="rotate(-45)"/>
+    <ellipse cx="0" cy="5" rx="35" ry="11" fill="#15803d" transform="rotate(0)"/>
+  </g>
+  <!-- Mid-left palm -->
+  <g transform="translate(320, 315)">
+    <rect x="-4" y="0" width="8" height="95" fill="#14532d" rx="2"/>
+    <ellipse cx="0" cy="5" rx="36" ry="14" fill="#15803d" transform="rotate(-18)"/>
+    <ellipse cx="0" cy="5" rx="36" ry="13" fill="#16a34a" transform="rotate(20)"/>
+    <ellipse cx="0" cy="5" rx="30" ry="11" fill="#22c55e" transform="rotate(0)"/>
+  </g>
+
+  <!-- ===== FARMER SILHOUETTES ===== -->
+  <!-- Farmer 1: bending forward transplanting (center-left) -->
+  <g transform="translate(540, 400)" fill="#7c2d12">
+    <!-- Body bent forward -->
+    <ellipse cx="0" cy="-8" rx="9" ry="11" fill="#7c2d12"/><!-- torso -->
+    <circle cx="0" cy="-24" r="10" fill="#451a03"/><!-- head -->
+    <!-- Traditional hat/wrap -->
+    <ellipse cx="0" cy="-28" rx="14" ry="5" fill="#92400e"/>
+    <!-- Arms extended down -->
+    <line x1="0" y1="-15" x2="-18" y2="4" stroke="#7c2d12" stroke-width="5" stroke-linecap="round"/>
+    <line x1="0" y1="-15" x2="18" y2="4" stroke="#7c2d12" stroke-width="5" stroke-linecap="round"/>
+    <!-- Legs -->
+    <line x1="0" y1="0" x2="-8" y2="22" stroke="#7c2d12" stroke-width="6" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="8" y2="22" stroke="#7c2d12" stroke-width="6" stroke-linecap="round"/>
+    <!-- Sari drape hint -->
+    <path d="M-9,-8 Q-15,5 -10,20 Q-5,10 0,0 Q5,10 10,20 Q15,5 9,-8 Z" fill="#b45309" opacity="0.6"/>
+  </g>
+
+  <!-- Farmer 2: standing upright with bundle of paddy seedlings (center) -->
+  <g transform="translate(700, 398)" fill="#78350f">
+    <line x1="0" y1="0" x2="0" y2="-55" stroke="#78350f" stroke-width="7" stroke-linecap="round"/><!-- body -->
+    <circle cx="0" cy="-65" r="12" fill="#451a03"/><!-- head -->
+    <!-- Hat -->
+    <ellipse cx="0" cy="-72" rx="18" ry="6" fill="#a16207"/>
+    <ellipse cx="0" cy="-75" rx="10" ry="4" fill="#92400e"/>
+    <!-- Left arm holding seedlings -->
+    <line x1="0" y1="-42" x2="-28" y2="-28" stroke="#78350f" stroke-width="6" stroke-linecap="round"/>
+    <!-- Seedling bundle -->
+    <ellipse cx="-34" cy="-22" rx="10" ry="14" fill="#22c55e" opacity="0.9"/>
+    <line x1="-28" y1="-14" x2="-28" y2="0" stroke="#15803d" stroke-width="3"/>
+    <line x1="-34" y1="-14" x2="-36" y2="0" stroke="#15803d" stroke-width="3"/>
+    <line x1="-38" y1="-14" x2="-40" y2="0" stroke="#15803d" stroke-width="3"/>
+    <!-- Right arm down -->
+    <line x1="0" y1="-42" x2="20" y2="-20" stroke="#78350f" stroke-width="6" stroke-linecap="round"/>
+    <!-- Legs -->
+    <line x1="0" y1="0" x2="-10" y2="24" stroke="#78350f" stroke-width="7" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="10" y2="24" stroke="#78350f" stroke-width="7" stroke-linecap="round"/>
+    <!-- Sari -->
+    <path d="M-7,-50 Q-14,-20 -12,20 L12,20 Q14,-20 7,-50 Z" fill="#b45309" opacity="0.55"/>
+  </g>
+
+  <!-- Farmer 3: bending at far right planting -->
+  <g transform="translate(900, 403)" fill="#7c2d12">
+    <ellipse cx="0" cy="-5" rx="8" ry="10" fill="#7c2d12"/>
+    <circle cx="0" cy="-20" r="9" fill="#451a03"/>
+    <ellipse cx="0" cy="-25" rx="13" ry="4" fill="#92400e"/>
+    <line x1="0" y1="-12" x2="-16" y2="6" stroke="#7c2d12" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="0" y1="-12" x2="16" y2="6" stroke="#7c2d12" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="0" y1="3" x2="-7" y2="20" stroke="#7c2d12" stroke-width="5.5" stroke-linecap="round"/>
+    <line x1="0" y1="3" x2="7" y2="20" stroke="#7c2d12" stroke-width="5.5" stroke-linecap="round"/>
+    <path d="M-8,-5 Q-12,5 -8,18 Q0,10 8,18 Q12,5 8,-5 Z" fill="#b45309" opacity="0.55"/>
+  </g>
+
+  <!-- Farmer 4: walking with basket on head (far left foreground) -->
+  <g transform="translate(200, 408)" fill="#92400e">
+    <line x1="0" y1="0" x2="0" y2="-50" stroke="#92400e" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="0" cy="-60" r="11" fill="#451a03"/>
+    <!-- Basket on head -->
+    <path d="M-14,-65 Q-12,-80 0,-78 Q12,-80 14,-65 Q12,-60 0,-62 Q-12,-60 -14,-65 Z" fill="#a16207"/>
+    <!-- Arms out balancing -->
+    <line x1="0" y1="-40" x2="-25" y2="-30" stroke="#92400e" stroke-width="5.5" stroke-linecap="round"/>
+    <line x1="0" y1="-40" x2="25" y2="-30" stroke="#92400e" stroke-width="5.5" stroke-linecap="round"/>
+    <!-- Walking legs -->
+    <line x1="0" y1="0" x2="-12" y2="22" stroke="#92400e" stroke-width="6.5" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="6" y2="22" stroke="#92400e" stroke-width="6.5" stroke-linecap="round"/>
+    <!-- Saree -->
+    <path d="M-7,-48 Q-16,-18 -14,18 L14,18 Q16,-18 7,-48 Z" fill="#dc2626" opacity="0.5"/>
+  </g>
+
+  <!-- Farmer 5: small silhouette in mid distance -->
+  <g transform="translate(1080, 408) scale(0.75)" fill="#78350f" opacity="0.8">
+    <line x1="0" y1="0" x2="0" y2="-48" stroke="#78350f" stroke-width="7"/>
+    <circle cx="0" cy="-57" r="10" fill="#451a03"/>
+    <ellipse cx="0" cy="-63" rx="14" ry="5" fill="#a16207"/>
+    <line x1="0" y1="-36" x2="-22" y2="-18" stroke="#78350f" stroke-width="5.5"/>
+    <line x1="0" y1="-36" x2="22" y2="-18" stroke="#78350f" stroke-width="5.5"/>
+    <line x1="0" y1="0" x2="-9" y2="20" stroke="#78350f" stroke-width="6.5"/>
+    <line x1="0" y1="0" x2="9" y2="20" stroke="#78350f" stroke-width="6.5"/>
+  </g>
+
+  <!-- Farmer 6: distant small figure (far background) -->
+  <g transform="translate(820, 385) scale(0.45)" fill="#78350f" opacity="0.6">
+    <line x1="0" y1="0" x2="0" y2="-48" stroke="#78350f" stroke-width="8"/>
+    <circle cx="0" cy="-57" r="12" fill="#451a03"/>
+    <line x1="0" y1="-36" x2="-25" y2="-20" stroke="#78350f" stroke-width="6"/>
+    <line x1="0" y1="-36" x2="25" y2="-20" stroke="#78350f" stroke-width="6"/>
+    <line x1="0" y1="0" x2="-10" y2="24" stroke="#78350f" stroke-width="7"/>
+    <line x1="0" y1="0" x2="10" y2="24" stroke="#78350f" stroke-width="7"/>
+  </g>
+
+  <!-- Bullock cart silhouette (far right) -->
+  <g transform="translate(1250, 415)" fill="#451a03" opacity="0.7">
+    <!-- Cart body -->
+    <rect x="-40" y="-25" width="80" height="25" rx="4" fill="#7c2d12"/>
+    <!-- Wheels -->
+    <circle cx="-28" cy="5" r="16" fill="none" stroke="#451a03" stroke-width="4"/>
+    <circle cx="28" cy="5" r="16" fill="none" stroke="#451a03" stroke-width="4"/>
+    <circle cx="-28" cy="5" r="3" fill="#451a03"/>
+    <circle cx="28" cy="5" r="3" fill="#451a03"/>
+    <!-- Shaft -->
+    <line x1="-40" y1="-10" x2="-80" y2="-8" stroke="#7c2d12" stroke-width="5"/>
+    <!-- Bullock -->
+    <ellipse cx="-100" cy="-8" rx="22" ry="12" fill="#92400e"/>
+    <circle cx="-120" cy="-12" r="9" fill="#78350f"/>
+    <!-- Horns -->
+    <line x1="-120" y1="-18" x2="-128" y2="-28" stroke="#451a03" stroke-width="2.5"/>
+    <line x1="-118" y1="-18" x2="-110" y2="-28" stroke="#451a03" stroke-width="2.5"/>
+    <!-- Farmer on cart -->
+    <circle cx="0" cy="-40" r="9" fill="#451a03"/>
+    <line x1="0" y1="-32" x2="0" y2="-25" stroke="#78350f" stroke-width="7"/>
+  </g>
+
+  <!-- ===== WATER REFLECTIONS (paddy flooded fields) ===== -->
+  <g opacity="0.2">
+    <ellipse cx="300" cy="406" rx="80" ry="5" fill="#fbbf24"/>
+    <ellipse cx="720" cy="406" rx="100" ry="5" fill="#fde68a"/>
+    <ellipse cx="1100" cy="406" rx="70" ry="4" fill="#fbbf24"/>
+    <!-- Sun reflection streak -->
+    <rect x="690" y="400" width="60" height="30" fill="#fef08a" opacity="0.3" rx="10"/>
+  </g>
+
+  <!-- ===== BIRDS IN SKY ===== -->
+  <g opacity="0.6" stroke="#1a0a2e" stroke-width="1.5" fill="none">
+    <!-- Bird flock left -->
+    <path d="M180,130 Q185,125 190,130"/>
+    <path d="M195,120 Q202,114 208,120"/>
+    <path d="M213,135 Q219,129 225,135"/>
+    <path d="M228,122 Q234,116 240,122"/>
+    <!-- Bird flock right -->
+    <path d="M1100,100 Q1106,94 1112,100"/>
+    <path d="M1118,115 Q1124,109 1130,115"/>
+    <path d="M1135,102 Q1141,96 1147,102"/>
+  </g>
+
+  <!-- ===== MIST / ATMOSPHERIC OVERLAY ===== -->
+  <rect width="1440" height="520" fill="url(#mist)"/>
+
+  <!-- Dark gradient overlay at top for text legibility if needed -->
+  <linearGradient id="topDark" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#000000" stop-opacity="0.1"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  </linearGradient>
+  <rect width="1440" height="180" fill="url(#topDark)"/>
+</svg>
